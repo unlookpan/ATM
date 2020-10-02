@@ -23,23 +23,44 @@ int people::get_account_number(void) {
 int people::get_password(void) {
 	return password;
 }
+people obj[2] = {
+		people(227,123),
+		people(526,456)
+};
+/*ATM类*/
+class ATM {
+protected:
 
-int main() {
-	int i = 0;
+public:
+	void better();
+	void cin_account_number_s();
+	void cin_password_s();
+	void get_account_number_b(int i);
+	void get_password_b(int i);
+
+private:
 	int password_b;
 	int account_number_b;
 	int password_s;
 	int account_number_s;
-	people obj[2] = {
-		people(227,123),
-		people(526,456)
-	};
-	
-	//输入账号和密码
+};
+
+void ATM::cin_account_number_s() {
 	cout << "请输入账号";
 	cin >> account_number_s;
+}
+void ATM::cin_password_s() {
 	cout << "请输入密码";
 	cin >> password_s;
+}
+void ATM::get_account_number_b(int i) {
+	account_number_b = obj[i].get_account_number();
+}
+void ATM::get_password_b(int i) {
+	password_b = obj[i].get_password();
+}
+void ATM::better() {
+	int i;
 	for (i = 0; i < 2; i++) {
 		account_number_b = obj[i].get_account_number();
 		if (account_number_b == account_number_s) {
@@ -48,10 +69,13 @@ int main() {
 			else cout << "密码错误" << "\n";
 		}
 	}
-
-	for (i = 0; i < 2; i++) {
-		cout << obj[i].get_account_number() << "\n" << obj[i].get_password() << "\n";
-	}
+}
+int main() {
+	ATM atm;
+	//输入账号和密码
+	atm.cin_account_number_s();
+	atm.cin_password_s();
+	atm.better();
 	return 0;
 }
 
