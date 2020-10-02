@@ -37,6 +37,8 @@ public:
 	void cin_password_s();
 	void get_account_number_b(int i);
 	void get_password_b(int i);
+	void ATM_function();
+	void print_message();
 
 private:
 	int password_b;
@@ -65,14 +67,30 @@ void ATM::better() {
 		account_number_b = obj[i].get_account_number();
 		if (account_number_b == account_number_s) {
 			password_b = obj[i].get_password();
-			if (password_b == password_s)cout << "登录成功" << "\n";
+			if (password_b == password_s) { 
+				cout << "登录成功" << "\n"; 
+				ATM_function();
+			}
 			else cout << "密码错误" << "\n";
 		}
 	}
 }
+void ATM::print_message() {
+	
+}
+void ATM::ATM_function() {
+	int function = 0;
+	cout << "按1查看信息\n";
+	cout << "按2取款\n";
+	cout << "按3修改密码\n";
+	switch (function) {
+	case 1:
+		print_message(); break;
+	}
+}
+
 int main() {
 	ATM atm;
-	//输入账号和密码
 	atm.cin_account_number_s();
 	atm.cin_password_s();
 	atm.better();
