@@ -1,21 +1,22 @@
 #pragma once
 #if !defined(bbbb)
 #define bbbb
-//#include "people.h"
+#include "people.h"
 class ATM {
 protected:
 
 public:
-	void better();
+	void get_in();
 	void cin_account_number_s();
 	void cin_password_s();
-	void get_account_number_b(int i);//»ñÈ¡peopleÀàÖĞµÄaccount_number
-	void get_password_b(int i);      //»ñÈ¡peopleÀàÖĞµÄpassword
-	void ATM_function();             //ÏÔÊ¾Ö÷½çÃæ
-	void print_message();            //´òÓ¡ĞÅÏ¢
-	void withdrawal_balance();       //È¡¿î
-	//void change_password(people &x);          //ĞŞ¸ÄÃÜÂë
+	void get_account_number_b(int i);//è·å–peopleç±»ä¸­çš„account_number
+	void get_password_b(int i);      //è·å–peopleç±»ä¸­çš„password
+	void ATM_function();             //æ˜¾ç¤ºä¸»ç•Œé¢
+	void print_message();            //æ‰“å°ä¿¡æ¯
+	void withdrawal_balance();       //å–æ¬¾
+	void change_password();          //ä¿®æ”¹å¯†ç 
 	void get_balance_b(int i);
+	void interface();
 
 private:
 	int password_b;
@@ -23,7 +24,7 @@ private:
 	int password_s;
 	int account_number_s;
 	int balance_b;
-	int withdrawal;                     //È¡¿î½ğ¶î
+	int withdrawal;                     //å–æ¬¾é‡‘é¢
 	int cin_password;
 };
 
