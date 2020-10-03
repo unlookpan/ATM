@@ -2,7 +2,7 @@
 #if !defined(aaaa)
 #define aaaa
 #include "ATM.h"
-/*ÓÃ»§Àà*/
+/*ç”¨æˆ·ç±»*/
 
 class people {
 protected:
@@ -12,10 +12,11 @@ public:
 	int get_account_number(void);
 	int get_password(void);
 	int get_balance(void);
-	//friend ATM;
+	void fu_passsword(int t);
+	void fu_balance(int t);
 private:
-	int account_number;                //ÕËºÅ
-	int password;                      //ÃÜÂë
-	int balance;                       //Óà¶î
+	int account_number;                //è´¦å·
+	int password;                      //å¯†ç 
+	int balance;                       //ä½™é¢
 };
 #endif
