@@ -24,3 +24,11 @@ int people::get_password(void) {
 int people::get_balance(void) {
 	return balance;
 }
+
+void people::fu_passsword(int t) {
+	password = t;
+}
+
+void people::fu_balance(int t) {
+	balance = t;
+}
